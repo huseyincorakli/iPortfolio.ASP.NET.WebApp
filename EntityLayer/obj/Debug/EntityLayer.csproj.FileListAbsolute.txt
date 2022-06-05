@@ -1,0 +1,6 @@
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\obj\Debug\EntityLayer.csprojAssemblyReference.cache
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\EntityLayer\obj\Debug\EntityLayer.pdb
