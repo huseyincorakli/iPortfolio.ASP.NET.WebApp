@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\IEducationInfoDal.cs" />
     <Compile Include="Abstract\IGalleryDal.cs" />
     <Compile Include="Abstract\IInteractionDal.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Abstract\ITestimonialDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfEducationInfoDal.cs" />
     <Compile Include="EntityFramework\EfGalleryDal.cs" />
     <Compile Include="EntityFramework\EfInteractionDal.cs" />
@@ -81,6 +83,10 @@
     <Compile Include="Migrations\202206052051264_mig_add2.cs" />
     <Compile Include="Migrations\202206052051264_mig_add2.designer.cs">
       <DependentUpon>202206052051264_mig_add2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061545459_mig_AdminClass.cs" />
+    <Compile Include="Migrations\202206061545459_mig_AdminClass.designer.cs">
+      <DependentUpon>202206061545459_mig_AdminClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206052051264_mig_add2.resx">
       <DependentUpon>202206052051264_mig_add2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061545459_mig_AdminClass.resx">
+      <DependentUpon>202206061545459_mig_AdminClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

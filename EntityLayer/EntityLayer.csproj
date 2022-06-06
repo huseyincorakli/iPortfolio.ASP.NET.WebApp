@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Admin.cs" />
     <Compile Include="Concrete\EducationInfo.cs" />
     <Compile Include="Concrete\Gallery.cs" />
     <Compile Include="Concrete\Interaction.cs" />

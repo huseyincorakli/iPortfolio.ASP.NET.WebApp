@@ -17,3 +17,4 @@ C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_delete2.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add2.resources
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AdminClass.resources
