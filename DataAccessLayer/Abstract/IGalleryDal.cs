@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    interface IGalleryDal:IRepository<Gallery>
+   public interface IGalleryDal:IRepository<Gallery>
     {
     }
 }

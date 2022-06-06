@@ -11,8 +11,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int SkillId { get; set; }
-        [StringLength(200)]
-        public string SkillAbaout { get; set; }
+       
         [StringLength(50)]
         public string SkillName { get; set; }
         public int SkillDegree { get; set; }

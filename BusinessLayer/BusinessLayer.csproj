@@ -41,7 +41,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminService.cs" />
+    <Compile Include="Abstract\IEduInfoService.cs" />
+    <Compile Include="Abstract\IGalleryService.cs" />
+    <Compile Include="Abstract\IInteractionService.cs" />
+    <Compile Include="Abstract\IPersonService.cs" />
+    <Compile Include="Abstract\ISkillService.cs" />
+    <Compile Include="Abstract\ITestimonialService.cs" />
+    <Compile Include="Concrete\AdminManager.cs" />
+    <Compile Include="Concrete\EducationInfoManager.cs" />
+    <Compile Include="Concrete\GalleryManager.cs" />
+    <Compile Include="Concrete\InteractionManager.cs" />
+    <Compile Include="Concrete\PersonManager.cs" />
+    <Compile Include="Concrete\SkillManager.cs" />
+    <Compile Include="Concrete\TestimonialManager.cs" />
+    <Compile Include="Hash\PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{d0cf7f98-89d1-43f4-9532-1a68bb5e24be}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{363004ce-ae53-4b22-a5ff-34e7135b3302}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

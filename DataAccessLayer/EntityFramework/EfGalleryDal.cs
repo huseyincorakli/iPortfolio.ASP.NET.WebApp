@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    public class EfGalleryDal:GenericRepository<Gallery>,IGalleryDal
+    public class EfGalleryDal:GenericRepository<Gallery>, Abstract.IGalleryDal
     {
     }
 }

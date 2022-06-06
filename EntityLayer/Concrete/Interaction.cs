@@ -11,12 +11,12 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int InteractionId { get; set; }
-        [StringLength(200)]
+        [StringLength(50)]
         public string InteractionDiscription { get; set; }
-        public int  HappyClients { get; set; }
-        public int  CompletedProject { get; set; }
-        public int HourOfSupport  { get; set; }
-        
+        [StringLength(20)]
+        public string InteractionName { get; set; }
+        public int InteractionValue { get; set; }
+
 
     }
 }

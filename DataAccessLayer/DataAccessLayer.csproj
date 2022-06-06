@@ -88,6 +88,22 @@
     <Compile Include="Migrations\202206061545459_mig_AdminClass.designer.cs">
       <DependentUpon>202206061545459_mig_AdminClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206061759257_mig_PasswordLenght.cs" />
+    <Compile Include="Migrations\202206061759257_mig_PasswordLenght.designer.cs">
+      <DependentUpon>202206061759257_mig_PasswordLenght.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061814268_mig_UpdateSkill.cs" />
+    <Compile Include="Migrations\202206061814268_mig_UpdateSkill.designer.cs">
+      <DependentUpon>202206061814268_mig_UpdateSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061820265_mig_UpdateInteraction.cs" />
+    <Compile Include="Migrations\202206061820265_mig_UpdateInteraction.designer.cs">
+      <DependentUpon>202206061820265_mig_UpdateInteraction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061825037_mig_UpdateTestimo.cs" />
+    <Compile Include="Migrations\202206061825037_mig_UpdateTestimo.designer.cs">
+      <DependentUpon>202206061825037_mig_UpdateTestimo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +132,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206061545459_mig_AdminClass.resx">
       <DependentUpon>202206061545459_mig_AdminClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061759257_mig_PasswordLenght.resx">
+      <DependentUpon>202206061759257_mig_PasswordLenght.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061814268_mig_UpdateSkill.resx">
+      <DependentUpon>202206061814268_mig_UpdateSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061820265_mig_UpdateInteraction.resx">
+      <DependentUpon>202206061820265_mig_UpdateInteraction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061825037_mig_UpdateTestimo.resx">
+      <DependentUpon>202206061825037_mig_UpdateTestimo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
