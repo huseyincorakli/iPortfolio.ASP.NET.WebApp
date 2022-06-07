@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.Hash;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,10 +29,24 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         [HttpPost]
         public ActionResult Edit(Admin p)
         {
-            p.Password= passwordHash.hash(p.Password);
-            adminManager.AdminUpdate(p);
+            AdminValidator adminValidator = new AdminValidator();
+            ValidationResult validationResult = adminValidator.Validate(p);
+            if (validationResult.IsValid)
+            {
+                p.Password = passwordHash.hash(p.Password);
+                adminManager.AdminUpdate(p);
 
-            return RedirectToAction("Edit");
+                return RedirectToAction("Edit");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+          
         }
     }
 }
