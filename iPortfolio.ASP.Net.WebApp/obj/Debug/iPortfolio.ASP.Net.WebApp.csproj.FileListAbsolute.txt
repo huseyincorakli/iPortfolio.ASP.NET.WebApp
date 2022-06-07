@@ -77,3 +77,14 @@ C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\obj\Debug\iPortfolio.ASP.Net.WebApp.csproj.CopyComplete
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\obj\Debug\iPortfolio.ASP.Net.WebApp.dll
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\obj\Debug\iPortfolio.ASP.Net.WebApp.pdb
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\BusinessLayer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\DataAccessLayer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityLayer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityFramework.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\BusinessLayer.pdb
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\DataAccessLayer.pdb
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\DataAccessLayer.dll.config
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityLayer.pdb
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityFramework.xml
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\EntityFramework.SqlServer.xml
