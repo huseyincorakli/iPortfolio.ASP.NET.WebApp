@@ -33,10 +33,10 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         {
             AdminValidator adminValidator = new AdminValidator();
             ValidationResult validationResult = adminValidator.Validate(p);
+           
             if (validationResult.IsValid)
             {
                 p.Password = passwordHash.hash(p.Password);
-
                 adminManager.AdminUpdate(p);
 
                 return RedirectToAction("Edit");
@@ -50,9 +50,6 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             }
             return View();
                
-           
-           
-          
         }
     }
 }

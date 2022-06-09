@@ -29,18 +29,20 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         [HttpPost]
         public ActionResult SignIn(Admin p)
         {
-            AdminValidator adminValidator = new AdminValidator();
-            ValidationResult validationResult = adminValidator.Validate(p);
+            
+
            
-            var adminInfo = adminManager.GetByInfo(passwordHash.hash(p.Password), p.Username);
-            if (adminInfo!=null)
-            {
-                FormsAuthentication.SetAuthCookie(p.Username,false);
-                Session["Username"] = adminInfo.Username;
-                return RedirectToAction("Edit", "Admin");
-            }
-            else
-                return RedirectToAction("SignIn");
+                var adminInfo = adminManager.GetByInfo(passwordHash.hash(p.Password), p.Username);
+                if (adminInfo != null)
+                {
+                    FormsAuthentication.SetAuthCookie(p.Username, false);
+                    Session["Username"] = adminInfo.Username;
+                    return RedirectToAction("Edit", "Admin");
+                }
+                else
+                    return RedirectToAction("SignIn");
+           
+           
         }
 
         public ActionResult SignOut()
