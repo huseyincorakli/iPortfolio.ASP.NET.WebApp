@@ -60,6 +60,7 @@
     <Compile Include="Concrete\TestimonialManager.cs" />
     <Compile Include="Hash\PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationRules\AdminValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

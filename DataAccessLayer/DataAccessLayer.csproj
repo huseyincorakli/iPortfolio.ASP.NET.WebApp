@@ -104,6 +104,10 @@
     <Compile Include="Migrations\202206061825037_mig_UpdateTestimo.designer.cs">
       <DependentUpon>202206061825037_mig_UpdateTestimo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206091735138_mig_deleteAdminStatus.cs" />
+    <Compile Include="Migrations\202206091735138_mig_deleteAdminStatus.designer.cs">
+      <DependentUpon>202206091735138_mig_deleteAdminStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -144,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206061825037_mig_UpdateTestimo.resx">
       <DependentUpon>202206061825037_mig_UpdateTestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206091735138_mig_deleteAdminStatus.resx">
+      <DependentUpon>202206091735138_mig_deleteAdminStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

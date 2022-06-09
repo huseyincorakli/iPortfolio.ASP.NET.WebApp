@@ -15,6 +15,6 @@ namespace EntityLayer.Concrete
         public string Username { get; set; }
         [StringLength(100)]
         public string Password { get; set; }
-        public bool Status { get; set; }
+       
     }
 }

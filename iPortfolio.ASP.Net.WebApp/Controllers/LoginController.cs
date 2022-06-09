@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.Hash;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
       
         AdminManager adminManager = new AdminManager(new EfAdminDal());
         PasswordHash passwordHash = new PasswordHash();
+        
                              
            [HttpGet] [AllowAnonymous]
         public ActionResult SignIn()
@@ -26,8 +29,10 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         [HttpPost]
         public ActionResult SignIn(Admin p)
         {
-            var hashedPassword = passwordHash.hash(p.Password);
-            var adminInfo = adminManager.GetByInfo(hashedPassword, p.Username);
+            AdminValidator adminValidator = new AdminValidator();
+            ValidationResult validationResult = adminValidator.Validate(p);
+           
+            var adminInfo = adminManager.GetByInfo(passwordHash.hash(p.Password), p.Username);
             if (adminInfo!=null)
             {
                 FormsAuthentication.SetAuthCookie(p.Username,false);

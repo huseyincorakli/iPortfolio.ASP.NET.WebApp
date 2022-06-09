@@ -10,6 +10,7 @@ namespace BusinessLayer.Hash
 {
     public class PasswordHash
     {
+        
         public string hash(string password)
         {
             MD5 md5 = new MD5CryptoServiceProvider();
