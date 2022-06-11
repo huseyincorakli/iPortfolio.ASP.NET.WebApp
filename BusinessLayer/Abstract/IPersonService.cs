@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstract
   public  interface IPersonService
     {
         List<Person> GetList();
+        Person GetPerson();
         void PersonAdd(Person p);
         Person GetById(int id);
         void PersonDelete(Person p);

@@ -26,7 +26,7 @@ namespace EntityLayer.Concrete
         public string PersonExperience { get; set; }
         [StringLength(80)]
         public string PersonAboutHead { get; set; }
-        [StringLength(150)]
+        [StringLength(300)]
         public string PersonAboutBody { get; set; }
     }
 }

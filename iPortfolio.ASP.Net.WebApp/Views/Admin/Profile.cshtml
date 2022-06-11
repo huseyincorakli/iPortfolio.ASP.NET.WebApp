@@ -1,0 +1,61 @@
+﻿@model  EntityLayer.Concrete.Person
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Profil Düzenleme</h4>
+        <form class="forms-sample" method="post" action="@Url.Action("Profile","Admin")">
+            <div class="form-group">
+                @Html.HiddenFor(x => x.PersonId)
+                <label >Ad ve Soyad:</label>
+                @Html.TextBoxFor(x => x.PersonNameSurname, new {@class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonNameSurname, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Doğum Tarihi:</label>
+                @Html.TextBoxFor(x => x.PersonBirthday, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonBirthday, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Telefon Numarası:</label>
+                @Html.TextBoxFor(x => x.PersonGsm, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonGsm, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputConfirmPassword1">Email:</label>
+                @Html.TextBoxFor(x => x.PersonEmail, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonEmail, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Yaşadığınız Şehir:</label>
+                @Html.TextBoxFor(x => x.PersonCity, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonCity, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">İşiniz:</label>
+                @Html.TextBoxFor(x => x.PersonJob, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonJob, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Deneyim Seviyesi:</label>
+                @Html.TextBoxFor(x => x.PersonExperience, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonExperience, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Kendimi Tanıtan Başlık:</label>
+                @Html.TextBoxFor(x => x.PersonAboutHead, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonAboutHead, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Kendimi Tanıtan Metin:</label>
+                @Html.TextAreaFor(x => x.PersonAboutBody, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PersonAboutBody, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <button type="submit" style="float:right" class="btn btn-primary mr-2">GÜNCELLE</button>
+        </form>
+    </div>
+</div>
+

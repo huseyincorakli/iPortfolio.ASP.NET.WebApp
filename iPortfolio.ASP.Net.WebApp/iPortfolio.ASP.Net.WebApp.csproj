@@ -17319,6 +17319,7 @@
     <Content Include="theme\theme\template\package.json" />
     <Content Include="Views\Login\SignIn.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

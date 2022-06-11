@@ -61,6 +61,7 @@
     <Compile Include="Hash\PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\AdminValidator.cs" />
+    <Compile Include="ValidationRules\PersonValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

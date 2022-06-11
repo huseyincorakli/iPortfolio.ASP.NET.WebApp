@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             return _personDal.List();
         }
 
+        public Person GetPerson()
+        {
+            return _personDal.List().FirstOrDefault();
+        }
+
         public void PersonAdd(Person p)
         {
             _personDal.Insert(p);

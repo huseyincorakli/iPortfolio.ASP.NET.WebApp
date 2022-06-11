@@ -4,7 +4,6 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using FluentValidation.Results;
 using EntityLayer.Concrete;
-using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +12,14 @@ using System.Web.Mvc;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
-    
+    [Authorize]
     public class AdminController : Controller
     {
         AdminManager adminManager = new AdminManager(new EfAdminDal());
+        PersonManager personManager = new PersonManager(new EfPersonDal());
         PasswordHash passwordHash = new PasswordHash();
         
-       [HttpGet] [Authorize]
+       [HttpGet] 
         public ActionResult Edit()
         {
             var username = (string)Session["Username"];
@@ -51,5 +51,35 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             return View();
                
         }
+
+        [HttpGet]
+        public ActionResult Profile()
+        {
+            var person = personManager.GetPerson();
+
+            return View(person);
+        }
+        [HttpPost]
+        public ActionResult Profile(Person p)
+        {
+            PersonValidator personValidator = new PersonValidator();
+            ValidationResult personValResul = personValidator.Validate(p);
+            if (personValResul.IsValid)
+            {
+                personManager.PersonUpdate(p);
+                return RedirectToAction("Profile");
+            }
+            else
+            {
+                foreach (var item in personValResul.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+         
+        }
+
+
     }
 }

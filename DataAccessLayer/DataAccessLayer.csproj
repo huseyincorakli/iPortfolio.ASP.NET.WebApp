@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202206091735138_mig_deleteAdminStatus.designer.cs">
       <DependentUpon>202206091735138_mig_deleteAdminStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206111900278_mig_PersonUpdated.cs" />
+    <Compile Include="Migrations\202206111900278_mig_PersonUpdated.designer.cs">
+      <DependentUpon>202206111900278_mig_PersonUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206091735138_mig_deleteAdminStatus.resx">
       <DependentUpon>202206091735138_mig_deleteAdminStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206111900278_mig_PersonUpdated.resx">
+      <DependentUpon>202206111900278_mig_PersonUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
