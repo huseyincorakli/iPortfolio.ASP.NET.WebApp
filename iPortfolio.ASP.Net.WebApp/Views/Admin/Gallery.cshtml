@@ -1,0 +1,51 @@
+﻿@using EntityLayer.Concrete
+@model List<Gallery>
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<button style="margin-left:12px" class="btn btn-inverse-success" href="/Admin/AddGalleryPhoto" hreflang="#">
+    <span class="menu-icon">
+        <i class="mdi mdi-account-convert"></i>
+    </span>
+    <span class="menu-title">Yeni Resim Ekle</span>
+</button>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-top:20px">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@item.ImageUrl" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">@item.Description</p>
+                        <a href="#" data-toggle="modal" data-target="/Admin/GalleryEditPhoto/@item.Id" class="btn btn-inverse-primary">Düzenle</a>
+                        <a style="margin-left:5px" id="deletePhoto" href="/Admin/GalleryDeletePhoto/@item.Id" class="btn btn-inverse-danger ">Sil</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+    var btn = document.querySelectorAll("#deletePhoto");
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Fotoğraf silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+    
+</script>

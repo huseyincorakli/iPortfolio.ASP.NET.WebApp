@@ -17,6 +17,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
     {
         AdminManager adminManager = new AdminManager(new EfAdminDal());
         PersonManager personManager = new PersonManager(new EfPersonDal());
+        GalleryManager galleryManager = new GalleryManager(new EfGalleryDal());
         PasswordHash passwordHash = new PasswordHash();
         
        [HttpGet] 
@@ -78,6 +79,20 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             }
             return View();
          
+        }
+
+       
+        public ActionResult Gallery()
+        {
+            var items = galleryManager.GetList();
+            return View(items);
+        }
+
+       public ActionResult GalleryDeletePhoto(int id)
+        {
+            var item = galleryManager.GetById(id);
+            galleryManager.GalleryDelete(item);
+            return RedirectToAction("Gallery");
         }
 
 

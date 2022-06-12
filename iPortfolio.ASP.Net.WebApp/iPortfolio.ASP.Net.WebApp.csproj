@@ -149,6 +149,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image-galeri\animal-g59218e499_1920.jpg" />
+    <Content Include="image-galeri\cat-g1ca3907f0_1920.jpg" />
+    <Content Include="image-galeri\dolphin-g469d04442_1920.jpg" />
+    <Content Include="image-galeri\fox-g7ae59a0da_1920.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -17320,6 +17324,7 @@
     <Content Include="Views\Login\SignIn.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Profile.cshtml" />
+    <Content Include="Views\Admin\Gallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
