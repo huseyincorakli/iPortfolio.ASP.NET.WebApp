@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.EducationInfo
+ 
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card col-lg-6 mx-auto">
+    <div class="card-body px-5 py-5">
+        <h3 class="card-title text-left mb-3">Yeni Tecrübe Ekle</h3>
+
+        <form class="forms-sample" method="post" action="@Url.Action("AddEducation","Education")">
+            <div class="form-group">
+                @Html.HiddenFor(x => x.EduInfoId)
+                <label>Ana Başlık:</label>
+                @Html.TextBoxFor(x => x.EduHeading, new { @class = "form-control p_input",})
+                @Html.ValidationMessageFor(x => x.EduHeading, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Özet Başlığı(Yer):</label>
+                @Html.TextBoxFor(x => x.EduSumaryHead, new { @class = "form-control p_input" })
+                @Html.ValidationMessageFor(x => x.EduSumaryHead, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Açıklama:</label>
+                @Html.TextBoxFor(x => x.EduDescription, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.EduDescription, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Tarih:</label>
+                @Html.TextBoxFor(x => x.EduTime, new { @class = "form-control", @placeholder = "gün.ay.yıl şeklinde giriniz" })
+                @Html.ValidationMessageFor(x => x.EduTime, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+
+            <button type="submit" style="float:right" class="btn btn-primary mr-2">EKLE</button>
+        </form>
+
+    </div>
+</div>
+

@@ -112,6 +112,18 @@
     <Compile Include="Migrations\202206111900278_mig_PersonUpdated.designer.cs">
       <DependentUpon>202206111900278_mig_PersonUpdated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206120613244_mig_UpdateGallery.cs" />
+    <Compile Include="Migrations\202206120613244_mig_UpdateGallery.designer.cs">
+      <DependentUpon>202206120613244_mig_UpdateGallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206121037037_mig_UpdateContext.cs" />
+    <Compile Include="Migrations\202206121037037_mig_UpdateContext.designer.cs">
+      <DependentUpon>202206121037037_mig_UpdateContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206121039076_mig_UpdateContext2.cs" />
+    <Compile Include="Migrations\202206121039076_mig_UpdateContext2.designer.cs">
+      <DependentUpon>202206121039076_mig_UpdateContext2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -158,6 +170,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206111900278_mig_PersonUpdated.resx">
       <DependentUpon>202206111900278_mig_PersonUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206120613244_mig_UpdateGallery.resx">
+      <DependentUpon>202206120613244_mig_UpdateGallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206121037037_mig_UpdateContext.resx">
+      <DependentUpon>202206121037037_mig_UpdateContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206121039076_mig_UpdateContext2.resx">
+      <DependentUpon>202206121039076_mig_UpdateContext2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

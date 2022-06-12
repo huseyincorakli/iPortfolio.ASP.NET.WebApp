@@ -1,0 +1,63 @@
+﻿@using EntityLayer.Concrete
+@model List<EducationInfo> 
+@{
+    ViewBag.Title = "ListEducationInfo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-body">
+    <a class="btn btn-inverse-primary" href="/Education/AddEducation">Yeni Eğitim Ekle</a>
+   <hr />
+    <h4 class="card-title">Eğitim Bilgileri</h4>
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Eğitim Başlığı </th>
+                    <th> Eğitim Açıklama </th>
+                    <th> Eğitim Özet Başlığı </th>
+                    <th> Eğitim Zamanı </th>
+                    <th> Sil </th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            @item.EduInfoId
+                        </td>
+                        <td> @item.EduHeading.Substring(0,15)... </td>
+                        <td>
+                            @item.EduDescription.Substring(0,25)...
+                        </td>
+                        <td>@item.EduSumaryHead.Substring(0,10)... </td>
+                        <td>@(((DateTime)item.EduTime).ToString("dd-MMMM-yyyy")) </td>
+                        <td><a id="deleteEdu" href="/Education/DeleteEducation/@item.EduInfoId" class="btn btn-inverse-danger">Sil</a> </td>
+                        <td><a href="/Education/UpdateEducation/@item.EduInfoId" class="btn btn-inverse-success">Güncelle</a> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var btn = document.querySelectorAll("#deleteEdu");
+
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Öge silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+
+
+</script>

@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
@@ -81,14 +83,39 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
          
         }
 
-       
-        public ActionResult Gallery()
+        public ActionResult Gallery(int p=1)
         {
-            var items = galleryManager.GetList();
+            var items = galleryManager.GetList().ToPagedList(p,3);
             return View(items);
         }
-
-       public ActionResult GalleryDeletePhoto(int id)
+        [HttpGet]
+        public ActionResult AddPhotoGallery()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddPhotoGallery(Gallery p)
+        {
+                galleryManager.GalleryAdd(p);
+                return RedirectToAction("Gallery");
+          
+        }
+        [HttpGet]
+        public ActionResult EditPhotoGallery(int id)
+        {
+            
+            var item = galleryManager.GetById(id);
+            return View(item);
+        }
+        [HttpPost]
+        public ActionResult EditPhotoGallery(Gallery p)
+        {
+          
+            galleryManager.GalleryUpdate(p);
+            return RedirectToAction("EditPhotoGallery");
+           
+        }
+        public ActionResult GalleryDeletePhoto(int id)
         {
             var item = galleryManager.GetById(id);
             galleryManager.GalleryDelete(item);

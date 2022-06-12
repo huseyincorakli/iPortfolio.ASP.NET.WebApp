@@ -186,3 +186,7 @@ C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\System.Xml.XPath.XDocument.dll
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\FluentValidation.dll
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\FluentValidation.xml
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\PagedList.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\PagedList.Mvc.dll
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\PagedList.xml
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\iPortfolio.ASP.Net.WebApp\bin\PagedList.Mvc.xml

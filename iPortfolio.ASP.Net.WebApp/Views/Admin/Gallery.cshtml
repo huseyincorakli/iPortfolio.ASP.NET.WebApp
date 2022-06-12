@@ -1,11 +1,13 @@
 ﻿@using EntityLayer.Concrete
-@model List<Gallery>
+@using PagedList.Mvc
+@using PagedList
+@model  PagedList.IPagedList<Gallery>
 @{
     ViewBag.Title = "Gallery";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<button style="margin-left:12px" class="btn btn-inverse-success" href="/Admin/AddGalleryPhoto" hreflang="#">
+<button style="margin-left:12px" class="btn btn-inverse-success" data-toggle="modal" data-target="#Modal1">
     <span class="menu-icon">
         <i class="mdi mdi-account-convert"></i>
     </span>
@@ -21,23 +23,46 @@
                     <img class="card-img-top" src="@item.ImageUrl" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">@item.Description</p>
-                        <a href="#" data-toggle="modal" data-target="/Admin/GalleryEditPhoto/@item.Id" class="btn btn-inverse-primary">Düzenle</a>
+                        <a  href="/Admin/EditPhotoGallery/@item.Id" class="btn btn-inverse-primary">Düzenle</a>
                         <a style="margin-left:5px" id="deletePhoto" href="/Admin/GalleryDeletePhoto/@item.Id" class="btn btn-inverse-danger ">Sil</a>
                     </div>
                 </div>
             </div>
-
         }
-
-
     </div>
-
 </div>
-
+<br />
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Gallery", new { p }), new PagedListRenderOptions
+   {
+       LiElementClasses = new List<string>
+       { "page-link"}
+   })
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Yeni Fotoğraf Ekle</h3>
+            </div>
+            <form method="post" action="/Admin/AddPhotoGallery">
+                <div class="modal-body">
+                    <label>Fotoğraf Açıklaması</label>
+                    <input tpye="text" name="Description" class="form-control" />
+                    <br />
+                    <label>Fotoğraf Linki</label>
+                    <input tpye="text" name="ImageUrl" class="form-control" />
+                    <br />
+                    <button style="float:right" class="btn btn-inverse-primary">Yeni Resim Ekle</button>
+                    <br />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script>
     var btn = document.querySelectorAll("#deletePhoto");
+   
 
     for (var i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", function (e) {
@@ -47,5 +72,6 @@
             }
         })
     }
-    
+
+
 </script>

@@ -10,7 +10,7 @@ namespace DataAccessLayer.Concrete
 {
     public class Context:DbContext
     {
-        public DbSet<EducationInfo> EduInfos { get; set; }
+        public DbSet<EducationInfo> EducationInfoes { get; set; }
         public DbSet<Gallery> Galleries { get; set; }
         public DbSet<Interaction> Interactions { get; set; }
         public DbSet<Person> Persons { get; set; }

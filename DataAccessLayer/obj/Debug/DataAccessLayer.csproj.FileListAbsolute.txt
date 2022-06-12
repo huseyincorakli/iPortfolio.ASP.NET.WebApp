@@ -24,3 +24,6 @@ C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_UpdateTestimo.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_deleteAdminStatus.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_PersonUpdated.resources
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_UpdateGallery.resources
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_UpdateContext.resources
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_UpdateContext2.resources
