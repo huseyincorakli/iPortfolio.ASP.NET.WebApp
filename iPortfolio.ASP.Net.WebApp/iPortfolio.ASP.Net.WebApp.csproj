@@ -17343,6 +17343,8 @@
     <Content Include="Views\Interaction\AddInteraction.cshtml" />
     <Content Include="Views\Interaction\EditInteraction.cshtml" />
     <Content Include="Views\Testimonial\Testimonial.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\EditTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

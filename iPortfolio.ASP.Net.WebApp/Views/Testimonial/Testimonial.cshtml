@@ -1,8 +1,65 @@
-﻿
+﻿@using EntityLayer.Concrete
+@model List<Testimonial>
 @{
     ViewBag.Title = "Testimonial";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Testimonial</h2>
+
+<div class="card-body">
+    <div>
+        <a class="btn btn-inverse-primary" href="/Testimonial/AddTestimonial">Yeni Referans Ekle</a>
+        <br />
+        <br />
+    </div>
+    <div class="table-responsive">
+        <h4>Referanslar</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Fotoğraf </th>
+                    <th> Referans Olan </th>
+                    <th> Ünvan </th>
+                    <th> Yorum </th>
+
+                    <th> Sil</th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td class="py-1">
+                        @item.TestimoId
+                    </td>
+                    <td> <img style="width:45px; height:45px" src="@item.TestimoImageUrl"></td>
+                    <td>
+                        @item.TestimoNameSurname
+                    </td>
+                    <td> @item.TestimoTitle </td>
+                    <td> @item.TestimoComment.Substring(0,20) </td>
+                    <td><a id="deleteBtn" href="/Testimonial/DeleteTestimonial/@item.TestimoId" class="btn btn-inverse-danger">Sil</a> </td>
+                    <td><a href="/Testimonial/EditTestimonial/@item.TestimoId" class="btn btn-inverse-success">Güncelle</a> </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <script>
+    var btn = document.querySelectorAll("#deleteBtn");
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Referans silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+    </script>
+
 
