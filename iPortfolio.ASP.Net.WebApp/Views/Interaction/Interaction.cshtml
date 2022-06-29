@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concrete
+@model List<Interaction>
+@{
+    ViewBag.Title = "Interaction";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-body">
+    <a class="btn btn-inverse-primary" href="/Interaction/AddInteraction">Yeni Etkileşim Ekle</a>
+    <hr>
+    <h4 class="card-title">Etkileşimler</h4>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Etkileşim Adı </th>
+                    <th> Etkileşim Açıklama </th>
+                    <th> Değer</th>
+                    <th> Sil </th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            @item.InteractionId
+                        </td>
+                        <td> @item.InteractionName </td>
+                        <td> @item.InteractionDiscription   </td>
+                        <td> @item.InteractionValue   </td>
+                        <td><a id="deleteBtn" href="/Interaction/DeleteInteraction/@item.InteractionId" class="btn btn-inverse-danger">Sil</a> </td>
+                        <td><a href="/Interaction/EditInteraction/@item.InteractionId" class="btn btn-inverse-success">Güncelle</a> </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var btn = document.querySelectorAll("#deleteBtn");
+
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Etkileşim silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+
+
+</script>
+

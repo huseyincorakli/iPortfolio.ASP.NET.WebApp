@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Interaction
+@{
+    ViewBag.Title = "EditInteraction";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card col-lg-6 mx-auto">
+    <div class="card-body px-5 py-5">
+        <h3 class="card-title text-left mb-3">Fotoğraf Bilgileri</h3>
+
+
+        <form class="forms-sample" method="post" action="@Url.Action("EditInteraction","Interaction")">
+            <div class="form-group">
+                @Html.HiddenFor(x => x.InteractionId)
+                <label>Etkileşim Adı:</label>
+                @Html.TextBoxFor(x => x.InteractionName, new { @class = "form-control p_input" })
+                @Html.ValidationMessageFor(x => x.InteractionName, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Etkileşim Açıklama:</label>
+                @Html.TextBoxFor(x => x.InteractionDiscription, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.InteractionDiscription, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Değer:</label>
+                @Html.TextBoxFor(x => x.InteractionValue, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.InteractionValue, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+
+            <button type="submit" style="float:right" class="btn btn-primary mr-2">GÜNCELLE</button>
+        </form>
+
+    </div>
+</div>
+
+

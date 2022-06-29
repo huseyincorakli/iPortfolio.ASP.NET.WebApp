@@ -140,7 +140,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\InteractionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -17337,6 +17339,10 @@
     <Content Include="Views\Education\ListEducationInfo.cshtml" />
     <Content Include="Views\Education\AddEducation.cshtml" />
     <Content Include="Views\Education\UpdateEducation.cshtml" />
+    <Content Include="Views\Interaction\Interaction.cshtml" />
+    <Content Include="Views\Interaction\AddInteraction.cshtml" />
+    <Content Include="Views\Interaction\EditInteraction.cshtml" />
+    <Content Include="Views\Testimonial\Testimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

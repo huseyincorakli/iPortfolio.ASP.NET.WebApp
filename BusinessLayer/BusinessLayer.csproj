@@ -63,6 +63,7 @@
     <Compile Include="ValidationRules\AdminValidator.cs" />
     <Compile Include="ValidationRules\EducationValidator.cs" />
     <Compile Include="ValidationRules\GalleryValidator.cs" />
+    <Compile Include="ValidationRules\InteractionValidator.cs" />
     <Compile Include="ValidationRules\PersonValidator.cs" />
   </ItemGroup>
   <ItemGroup>

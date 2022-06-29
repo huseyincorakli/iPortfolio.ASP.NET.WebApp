@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    class EfInteractionDal : GenericRepository<Interaction>, IInteractionDal
+    public class EfInteractionDal : GenericRepository<Interaction>, IInteractionDal
     {
     }
 }
