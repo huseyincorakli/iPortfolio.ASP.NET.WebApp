@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Skill
+@{
+    ViewBag.Title = "EditSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card col-lg-6 mx-auto">
+    <div class="card-body px-5 py-5">
+        <h3 class="card-title text-left mb-3">Tecrübe Güncelle</h3>
+
+        <form class="forms-sample" method="post" action="@Url.Action("EditSkill","Skill")">
+            <div class="form-group">
+                @Html.HiddenFor(x => x.SkillId)
+                <label>Yetenek:</label>
+                @Html.TextBoxFor(x => x.SkillName, new { @class = "form-control p_input", })
+                @Html.ValidationMessageFor(x => x.SkillName, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label>Yetenek Değeri(1-100):</label>
+                @Html.TextBoxFor(x => x.SkillDegree, new { @class = "form-control p_input" })
+                @Html.ValidationMessageFor(x => x.SkillDegree, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+
+            <button type="submit" style="float:right" class="btn btn-outline-secondary">GÜNCELLE</button>
+        </form>
+
+    </div>
+</div>
+

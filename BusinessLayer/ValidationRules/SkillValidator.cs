@@ -13,7 +13,8 @@ namespace BusinessLayer.ValidationRules
         public SkillValidator()
         {
             RuleFor(x => x.SkillDegree).NotEmpty().WithMessage("Boş geçilemez");
-            RuleFor(x => x.SkillDegree).GreaterThan(0).WithMessage("Sıfırdan  büyük olmalı");
+            RuleFor(x => x.SkillDegree).GreaterThan(0).WithMessage("Sıfırdan büyük olmalı");
+            RuleFor(x => x.SkillDegree).LessThanOrEqualTo(100).WithMessage("100'den küçük veya eşit olmalı");
             RuleFor(x => x.SkillName).NotEmpty().WithMessage("Boş geçilemez");
             RuleFor(x => x.SkillName).MaximumLength(50).WithMessage("En fazla 50 karakter olmalı");
         }

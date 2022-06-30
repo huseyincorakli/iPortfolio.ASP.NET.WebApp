@@ -14,6 +14,12 @@ namespace BusinessLayer.ValidationRules
         public PersonValidator()
         {
             RuleFor(x => x.PersonNameSurname).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(x => x.Intro).NotEmpty().WithMessage("Tanıtma boş geçilemez");
+            RuleFor(x => x.Intro).MaximumLength(400).WithMessage("Tanıtma en fazla 400 karakterden oluşabilir");
+            RuleFor(x => x.Intro).MinimumLength(40).WithMessage("Tanıtma en az 40 karakterden oluşabilir");
+            RuleFor(x => x.FreelanceStatus).MinimumLength(1).WithMessage("Çalışma statüsü en az 1 karakterden oluşabilir");
+            RuleFor(x => x.FreelanceStatus).MaximumLength(20).WithMessage("Çalışma statüsü en fazla 20 karakterden oluşabilir");
+            RuleFor(x => x.FreelanceStatus).NotEmpty().WithMessage("Çalışma statüsü boş geçilemez");
             RuleFor(x => x.PersonNameSurname).MaximumLength(50).WithMessage("Ad Soyad en fazla 50 karakter olmalı");
             RuleFor(x => x.PersonAboutBody).MinimumLength(2).WithMessage("Ad Soyad en az 2 karakter olmalı");
             RuleFor(x => x.PersonAboutHead).NotEmpty().WithMessage("Boş geçilemez");

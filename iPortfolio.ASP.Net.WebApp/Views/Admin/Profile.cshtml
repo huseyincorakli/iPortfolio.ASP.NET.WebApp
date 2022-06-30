@@ -10,8 +10,8 @@
         <form class="forms-sample" method="post" action="@Url.Action("Profile","Admin")">
             <div class="form-group">
                 @Html.HiddenFor(x => x.PersonId)
-                <label >Ad ve Soyad:</label>
-                @Html.TextBoxFor(x => x.PersonNameSurname, new {@class = "form-control" })
+                <label>Ad ve Soyad:</label>
+                @Html.TextBoxFor(x => x.PersonNameSurname, new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.PersonNameSurname, null, new { @class = "text-danger", @style = "font-size:12px" })
             </div>
             <div class="form-group">
@@ -53,6 +53,22 @@
                 <label for="exampleInputUsername1">Kendimi Tanıtan Metin:</label>
                 @Html.TextAreaFor(x => x.PersonAboutBody, new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.PersonAboutBody, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Kendimi Tanıtan Metin(Intro):</label>
+                @Html.TextAreaFor(x => x.Intro, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Intro, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Fotoğraf Url:</label>
+                @Html.TextBoxFor(x => x.PhotoUrl, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.PhotoUrl, null, new { @class = "text-danger", @style = "font-size:12px" })
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputUsername1">Çalışma Statüsü:</label>
+                @Html.TextBoxFor(x => x.FreelanceStatus, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.FreelanceStatus, null, new { @class = "text-danger", @style = "font-size:12px" })
             </div>
             <button type="submit" style="float:right" class="btn btn-primary mr-2">GÜNCELLE</button>
         </form>

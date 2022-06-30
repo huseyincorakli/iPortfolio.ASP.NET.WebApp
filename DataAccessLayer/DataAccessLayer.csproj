@@ -124,6 +124,14 @@
     <Compile Include="Migrations\202206121039076_mig_UpdateContext2.designer.cs">
       <DependentUpon>202206121039076_mig_UpdateContext2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206302040009_mig_PersonIntro.cs" />
+    <Compile Include="Migrations\202206302040009_mig_PersonIntro.designer.cs">
+      <DependentUpon>202206302040009_mig_PersonIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206302200299_mig_PersonUpdate.cs" />
+    <Compile Include="Migrations\202206302200299_mig_PersonUpdate.designer.cs">
+      <DependentUpon>202206302200299_mig_PersonUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206121039076_mig_UpdateContext2.resx">
       <DependentUpon>202206121039076_mig_UpdateContext2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206302040009_mig_PersonIntro.resx">
+      <DependentUpon>202206302040009_mig_PersonIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206302200299_mig_PersonUpdate.resx">
+      <DependentUpon>202206302200299_mig_PersonUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

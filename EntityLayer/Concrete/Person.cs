@@ -28,5 +28,13 @@ namespace EntityLayer.Concrete
         public string PersonAboutHead { get; set; }
         [StringLength(300)]
         public string PersonAboutBody { get; set; }
+
+        [StringLength(400)]
+        public string Intro { get; set; }
+        
+        [StringLength(20)]
+        public string FreelanceStatus { get; set; }
+        [StringLength(250)]
+        public string PhotoUrl { get; set; }
     }
 }

@@ -39,7 +39,7 @@
                         @item.TestimoNameSurname
                     </td>
                     <td> @item.TestimoTitle </td>
-                    <td> @item.TestimoComment.Substring(0,20) </td>
+                    <td> @item.TestimoComment.Substring(0,12) </td>
                     <td><a id="deleteBtn" href="/Testimonial/DeleteTestimonial/@item.TestimoId" class="btn btn-inverse-danger">Sil</a> </td>
                     <td><a href="/Testimonial/EditTestimonial/@item.TestimoId" class="btn btn-inverse-success">Güncelle</a> </td>
                 </tr>

@@ -1,0 +1,60 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+@{
+    ViewBag.Title = "Skill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-body">
+    <a class="btn btn-inverse-primary" href="/Skill/AddSkill">Yeni Beceri Ekle</a>
+    <hr />
+    <h4 class="card-title">Yetenekler</h4>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Yetenek </th>
+                    <th> Yetenek Değeri </th>
+                    <th> Sil </th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            @item.SkillId
+                        </td>
+                        <td> @item.SkillName</td>
+                        <td>
+                            @item.SkillDegree
+                        </td>
+                        <td><a id="deleteEdu" href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-inverse-danger">Sil</a> </td>
+                        <td><a href="/Skill/EditSkill/@item.SkillId" class="btn btn-inverse-success">Güncelle</a> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var btn = document.querySelectorAll("#deleteEdu");
+
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Öge silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+
+
+</script>
+
