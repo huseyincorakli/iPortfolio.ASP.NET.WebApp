@@ -40,7 +40,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             {
                 foreach (var item in validationResult.Errors)
                 {
-                    ModelState.AddModelError(item.ErrorMessage, item.PropertyName);
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
             return View();

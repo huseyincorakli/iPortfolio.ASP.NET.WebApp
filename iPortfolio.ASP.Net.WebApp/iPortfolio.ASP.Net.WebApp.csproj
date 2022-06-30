@@ -139,6 +139,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\InteractionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\viewmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="theme\theme\template\node_modules\node-gyp\lib\Find-VS2017.cs" />
   </ItemGroup>
@@ -17345,10 +17347,10 @@
     <Content Include="Views\Testimonial\Testimonial.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Testimonial\EditTestimonial.cshtml" />
+    <Content Include="Views\Deneme\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

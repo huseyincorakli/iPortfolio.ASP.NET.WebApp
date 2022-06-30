@@ -65,6 +65,8 @@
     <Compile Include="ValidationRules\GalleryValidator.cs" />
     <Compile Include="ValidationRules\InteractionValidator.cs" />
     <Compile Include="ValidationRules\PersonValidator.cs" />
+    <Compile Include="ValidationRules\SkillValidator.cs" />
+    <Compile Include="ValidationRules\TestimonialValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,0 +1,17 @@
+﻿@model  iPortfolio.ASP.Net.WebApp.Models.viewmodel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@foreach (var item in Model.People)
+{
+    <h2>@item.PersonNameSurname</h2>
+}
+
+@foreach (var item in Model.Skills)
+{
+    <h2>@item.SkillName</h2>
+}
+
+

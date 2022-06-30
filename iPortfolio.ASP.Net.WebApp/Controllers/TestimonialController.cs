@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,8 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
     public class TestimonialController : Controller
     {
         TestimonialManager testimoManager = new TestimonialManager(new EfTestimonialDal());
-        
+        TestimonialValidator validationRules = new TestimonialValidator();
+
         public ActionResult Testimonial()
         {
             var item = testimoManager.GetList();
@@ -34,8 +37,20 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         [HttpPost]
         public ActionResult AddTestimonial(Testimonial p)
         {
-            testimoManager.TestimonialAdd(p);
-            return RedirectToAction("Testimonial");
+            ValidationResult validationResult = validationRules.Validate(p);
+            if (validationResult.IsValid)
+            {
+                testimoManager.TestimonialAdd(p);
+                return RedirectToAction("Testimonial");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
 
         [HttpGet]
@@ -49,7 +64,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         {
             testimoManager.TestimonialUpdate(p);
             return RedirectToAction("Testimonial");
-           
+
         }
 
     }
