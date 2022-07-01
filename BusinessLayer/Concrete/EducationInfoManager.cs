@@ -40,5 +40,9 @@ namespace BusinessLayer.Concrete
         {
             return _eduInfoDal.List();
         }
+       public List<EducationInfo> ListByDate()
+        {
+            return _eduInfoDal.List().OrderBy(x => x.EduTime).ToList();
+        }
     }
 }

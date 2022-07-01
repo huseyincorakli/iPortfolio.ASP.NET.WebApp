@@ -178,35 +178,31 @@
 
                 <div class="section-title">
                     <h2>Kariyerim</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Sumary</h3>
+                        <h3 class="resume-title">Özet</h3>
                         <div class="resume-item pb-0">
-                            <h4>Alex Smith</h4>
-                            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+                            <h4>@Model.name</h4>
+                            <p><em>@Model.intro</em></p>
                             <ul>
-                                <li>Portland par 127,Orlando, FL</li>
-                                <li>(123) 456-7891</li>
-                                <li>alice.barkley@example.com</li>
+                                <li>@Model.city</li>
+                                <li>@(((DateTime)Model.birtday).ToString("dd-MMMM-yyyy"))</li>
+                                <li>@Model.mail</li>
                             </ul>
                         </div>
 
                         <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                            <h5>2015 - 2016</h5>
-                            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                            <h5>2010 - 2014</h5>
-                            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-                        </div>
+                        @foreach (var item in Model.EducationInfos)
+                        {
+                            <div class="resume-item">
+                                <h4>@item.EduHeading</h4>
+                                <h5>@(((DateTime)item.EduTime).ToString("dd-MMMM-yyyy"))</h5>
+                                <p><em>@item.EduSumaryHead</em></p>
+                                <p>@item.EduDescription</p>
+                            </div>
+                        }
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="resume-title">Professional Experience</h3>
@@ -243,183 +239,51 @@
 
                 <div class="section-title">
                     <h2>Portfolyo</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                    @foreach (var item in Model.Galleries)
+                    {
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="@item.ImageUrl" class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                    <a href="@item.ImageUrl" data-gallery="portfolioGallery" class="portfolio-lightbox" title="@item.Description"><i class="bx bx-plus"></i></a>
+                                    <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="~/theme/iPortfolio/iPortfolio/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="~/theme/iPortfolio/iPortfolio/portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
+                    }
                 </div>
 
             </div>
-        </section><!-- End Portfolio Section -->
-        <!-- ======= Services Section ======= -->
-        <!-- ======= Testimonials Section ======= -->
+        </section>
         <section id="testimonials" class="testimonials section-bg">
             <div class="container">
 
                 <div class="section-title">
                     <h2>Referanslar</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="~/theme/iPortfolio/iPortfolio/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                        @foreach (var item in Model.Testimonials)
+                        {
+                            <div class="swiper-slide">
+                                <div class="testimonial-item" data-aos="fade-up">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                   @item.TestimoComment
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                    <img src="@item.TestimoImageUrl" style="width:90px; height:90px" class="testimonial-img" alt="">
+                                    <h3>@item.TestimoNameSurname</h3>
+                                    <h4>@item.TestimoTitle</h4>
+                                </div>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="~/theme/iPortfolio/iPortfolio/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="~/theme/iPortfolio/iPortfolio/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="~/theme/iPortfolio/iPortfolio/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="~/theme/iPortfolio/iPortfolio/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
+                        }
 
                     </div>
                     <div class="swiper-pagination"></div>

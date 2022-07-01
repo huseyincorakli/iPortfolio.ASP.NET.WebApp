@@ -45,14 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAdminService.cs" />
+    <Compile Include="Abstract\IContactLinkService.cs" />
     <Compile Include="Abstract\IEduInfoService.cs" />
+    <Compile Include="Abstract\IExperienceService.cs" />
     <Compile Include="Abstract\IGalleryService.cs" />
     <Compile Include="Abstract\IInteractionService.cs" />
     <Compile Include="Abstract\IPersonService.cs" />
     <Compile Include="Abstract\ISkillService.cs" />
     <Compile Include="Abstract\ITestimonialService.cs" />
     <Compile Include="Concrete\AdminManager.cs" />
+    <Compile Include="Concrete\ContactLinkManager.cs" />
     <Compile Include="Concrete\EducationInfoManager.cs" />
+    <Compile Include="Concrete\ExperienceInfoManager.cs" />
     <Compile Include="Concrete\GalleryManager.cs" />
     <Compile Include="Concrete\InteractionManager.cs" />
     <Compile Include="Concrete\PersonManager.cs" />

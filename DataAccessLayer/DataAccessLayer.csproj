@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAdminDal.cs" />
+    <Compile Include="Abstract\IContactLinkDal.cs" />
     <Compile Include="Abstract\IEducationInfoDal.cs" />
+    <Compile Include="Abstract\IExperienceInfoDal.cs" />
     <Compile Include="Abstract\IGalleryDal.cs" />
     <Compile Include="Abstract\IInteractionDal.cs" />
     <Compile Include="Abstract\IPersonDal.cs" />
@@ -62,7 +64,9 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAdminDal.cs" />
+    <Compile Include="EntityFramework\EfContactLinkDal.cs" />
     <Compile Include="EntityFramework\EfEducationInfoDal.cs" />
+    <Compile Include="EntityFramework\EfExperienceInfoDal.cs" />
     <Compile Include="EntityFramework\EfGalleryDal.cs" />
     <Compile Include="EntityFramework\EfInteractionDal.cs" />
     <Compile Include="EntityFramework\EfPersonDal.cs" />
@@ -132,6 +136,10 @@
     <Compile Include="Migrations\202206302200299_mig_PersonUpdate.designer.cs">
       <DependentUpon>202206302200299_mig_PersonUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207011319272_mig_ExperienceInfo_ContactLink_Added.cs" />
+    <Compile Include="Migrations\202207011319272_mig_ExperienceInfo_ContactLink_Added.designer.cs">
+      <DependentUpon>202207011319272_mig_ExperienceInfo_ContactLink_Added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -193,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206302200299_mig_PersonUpdate.resx">
       <DependentUpon>202206302200299_mig_PersonUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011319272_mig_ExperienceInfo_ContactLink_Added.resx">
+      <DependentUpon>202207011319272_mig_ExperienceInfo_ContactLink_Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\Admin.cs" />
+    <Compile Include="Concrete\ContactLink.cs" />
     <Compile Include="Concrete\EducationInfo.cs" />
+    <Compile Include="Concrete\ExperienceInfo.cs" />
     <Compile Include="Concrete\Gallery.cs" />
     <Compile Include="Concrete\Interaction.cs" />
     <Compile Include="Concrete\Person.cs" />

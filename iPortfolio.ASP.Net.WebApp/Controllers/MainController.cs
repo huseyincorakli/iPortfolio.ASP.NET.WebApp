@@ -34,9 +34,10 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             md.photo = personManager.GetPerson().PhotoUrl;
             md.freelanceStatus = personManager.GetPerson().FreelanceStatus;
             md.Skills = skillManager.GetList();
-            md.EducationInfos = eduManager.GetList();
+            md.EducationInfos = eduManager.ListByDate();
             md.Interactions = interactionManager.GetList();
             md.Testimonials = testimonialManager.GetList();
+            md.Galleries = galleryManager.GetList();
             return View(md);
         }
     }
