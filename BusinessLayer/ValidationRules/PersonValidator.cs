@@ -32,13 +32,13 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.PersonEmail).NotEmpty().WithMessage("Boş geçilemez");
             RuleFor(x => x.PersonEmail).EmailAddress().WithMessage("Geçerli bir  email adresi olmalı");
             RuleFor(x => x.PersonExperience).NotEmpty().WithMessage("Boş geçilemez");
-            RuleFor(x => x.PersonExperience).MaximumLength(30).WithMessage("En fazla 30 karakter olmalı");
+            RuleFor(x => x.PersonExperience).MaximumLength(50).WithMessage("En fazla 50 karakter olmalı");
             RuleFor(x => x.PersonExperience).MinimumLength(5).WithMessage("En az 5 karakter olmalı");
             RuleFor(x => x.PersonGsm).NotEmpty().WithMessage("Boş geçilemez");
             RuleFor(x => x.PersonGsm).MaximumLength(50).WithMessage("En fazla 50 karakter olmalı");
             RuleFor(x => x.PersonGsm).MinimumLength(10).WithMessage("En az 10 karakter olmalı");
             RuleFor(x => x.PersonJob).NotEmpty().WithMessage("Boş geçilemez");
-            RuleFor(x => x.PersonJob).MaximumLength(20).WithMessage("En fazla 20 karakter olmalı");
+            RuleFor(x => x.PersonJob).MaximumLength(50).WithMessage("En fazla 50 karakter olmalı");
            
         }
     }

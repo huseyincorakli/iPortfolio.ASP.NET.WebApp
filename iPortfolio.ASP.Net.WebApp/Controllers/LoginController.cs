@@ -13,7 +13,7 @@ using System.Web.Security;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
-    
+     [AllowAnonymous]
     public class LoginController : Controller
     {   
       
@@ -21,7 +21,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         PasswordHash passwordHash = new PasswordHash();
         
                              
-           [HttpGet] [AllowAnonymous]
+           [HttpGet]
         public ActionResult SignIn()
         {
             return View();

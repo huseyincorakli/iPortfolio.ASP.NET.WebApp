@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
+    [Authorize]
     public class TestimonialController : Controller
     {
         TestimonialManager testimoManager = new TestimonialManager(new EfTestimonialDal());

@@ -42,5 +42,9 @@ namespace BusinessLayer.Concrete
         {
             _experienceInfoDal.Update(p);
         }
+        public List<ExperienceInfo> ListByDate()
+        {
+            return _experienceInfoDal.List().OrderBy(x => x.ExperienceTime).ToList();
+        }
     }
 }

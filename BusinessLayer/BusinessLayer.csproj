@@ -66,8 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\AdminValidator.cs" />
     <Compile Include="ValidationRules\EducationValidator.cs" />
+    <Compile Include="ValidationRules\ExperienceInfoValidator.cs" />
     <Compile Include="ValidationRules\GalleryValidator.cs" />
     <Compile Include="ValidationRules\InteractionValidator.cs" />
+    <Compile Include="ValidationRules\LinkValidator.cs" />
     <Compile Include="ValidationRules\PersonValidator.cs" />
     <Compile Include="ValidationRules\SkillValidator.cs" />
     <Compile Include="ValidationRules\TestimonialValidator.cs" />

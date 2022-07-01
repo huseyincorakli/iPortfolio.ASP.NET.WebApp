@@ -11,29 +11,29 @@
         @using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
         {
 
-            <div class="form-group">
-                @Html.HiddenFor(x => x.AdminId)
-                @Html.Label("Kullanıcı Adı:")
-                @Html.TextBoxFor(x => x.Username, new { @class = "form-control p_input" })
-                @Html.ValidationMessageFor(x => x.Username, null, new { @class = "text-danger", @style = "font-size:12px" })
-            </div>
+        <div class="form-group">
+            @Html.HiddenFor(x => x.AdminId)
+            @Html.Label("Kullanıcı Adı:")
+            @Html.TextBoxFor(x => x.Username, new { @class = "form-control p_input" })
+            @Html.ValidationMessageFor(x => x.Username, null, new { @class = "text-danger", @style = "font-size:12px" })
+        </div>
 
-            <div class="form-group">
-                <label>Şifrenizi Giriniz:</label>
-                <input id="editPassword" type="password" name="Password" class="form-control p_input">
-                @Html.ValidationMessageFor(x => x.Password, null, new { @class = "text-danger", @style = "font-size:12px" })
-                <br />
+        <div class="form-group">
+            <label>Şifrenizi Giriniz:</label>
+            <input id="editPassword" type="password" name="Password" class="form-control p_input">
+            @Html.ValidationMessageFor(x => x.Password, null, new { @class = "text-danger", @style = "font-size:12px" })
+            <br />
 
-                <a id="showPassword" style="color:#ffff; font-size:10px;float:right; margin-top:5px;margin-bottom:5px" href="# ">Şifreyi Göster</a>
+            <a id="showPassword" style="color:#ffff; font-size:10px;float:right; margin-top:5px;margin-bottom:5px" href="# ">Şifreyi Göster</a>
 
-            </div>
-            <div></div>
+        </div>
+        <div></div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-block enter-btn">Güncelle</button>
-            </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block enter-btn">Güncelle</button>
+        </div>
 
-        }
+    }
 
     </div>
 </div>

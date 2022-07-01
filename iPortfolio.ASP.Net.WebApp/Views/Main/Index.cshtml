@@ -51,13 +51,12 @@
 
             <div class="profile">
                 <img src="@Model.photo" alt=""  style="width:120px; height:120px" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="#">@Model.name</a></h1>
+                <h1 style="font-size:22px" class="text-light"><a href="#">@Model.name</a></h1>
                 <div class="social-links mt-3 text-center">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="@Model.twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="@Model.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="@Model.instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="@Model.linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
 
@@ -205,29 +204,19 @@
                         }
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>Senior graphic design specialist</h4>
-                            <h5>2019 - Present</h5>
-                            <p><em>Experion, New York, NY </em></p>
-                            <ul>
-                                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Graphic design specialist</h4>
-                            <h5>2017 - 2018</h5>
-                            <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                            <ul>
-                                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                            </ul>
-                        </div>
+                        <h3 class="resume-title">Deneyim</h3>
+                        @foreach (var item in Model.ExperienceInfos)
+                        {
+                            <div class="resume-item">
+                                <h4>@item.ExperienceHeading</h4>
+                                <h5>@(((DateTime)item.ExperienceTime).ToString("dd-MMMM-yyyy"))</h5>
+                                <p><em>@item.ExperienceSumaryHead </em></p>
+                                <ul>
+                                    <li><p>@item.ExperienceDescription</p></li>
+                                   
+                                </ul>
+                            </div>
+                        }
                     </div>
                 </div>
 

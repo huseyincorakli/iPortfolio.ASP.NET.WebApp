@@ -1,0 +1,59 @@
+﻿@using EntityLayer.Concrete
+@model List<ExperienceInfo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-body">
+    <a href="/Experience/AddExperience"  class="btn btn-inverse-info">Yeni Deneyim Ekle</a>
+    <hr />
+    <h4 class="card-title">Link Bilgileri</h4>
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Deneyim Başlığı</th>
+                    <th> Deneyim Açıklaması </th>
+                    <th> Yer </th>
+                    <th> Zaman </th>
+                    <th> Sil </th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1"> @item.ExperienceId </td>
+                        <td class="py-1"> @item.ExperienceHeading.Substring(0, 12)... </td>
+                        <td class="py-1"> @item.ExperienceDescription.Substring(0, 20)... </td>
+                        <td class="py-1"> @item.ExperienceSumaryHead </td>
+                        <td class="py-1"> @(((DateTime)item.ExperienceTime).ToString("dd-MMMM-yyyy")) </td>
+
+                        <td><a id="deleteBtn" href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-inverse-danger">Sil</a> </td>
+                        <td><a href="/Experience/EditExperience/@item.ExperienceId" class="btn btn-inverse-success">Güncelle</a> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    var btn = document.querySelectorAll("#deleteBtn");
+
+
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            if (window.confirm("Öge silinecek emin misiniz?")) {
+                location.href = this.href;
+            }
+        })
+    }
+
+
+</script>

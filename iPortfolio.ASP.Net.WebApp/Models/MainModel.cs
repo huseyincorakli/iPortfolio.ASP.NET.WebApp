@@ -13,6 +13,7 @@ namespace iPortfolio.ASP.Net.WebApp.Models
         public IEnumerable<Interaction> Interactions { get; set; }
         public IEnumerable<Skill> Skills { get; set; }
         public IEnumerable<Testimonial> Testimonials { get; set; } 
+        public IEnumerable<ExperienceInfo> ExperienceInfos { get; set; } 
         public string name { get; set; }
         public string aboutme { get; set; }
         public DateTime birtday { get; set; }
@@ -25,5 +26,10 @@ namespace iPortfolio.ASP.Net.WebApp.Models
         public string  intro { get; set; }
         public string  freelanceStatus { get; set; }
         public string  photo { get; set; }
+
+        public string twitter { get; set; }
+        public string instagram { get; set; }
+        public string facebook { get; set; }
+        public string linkedin { get; set; }
     }
 }

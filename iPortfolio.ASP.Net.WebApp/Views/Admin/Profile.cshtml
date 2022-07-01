@@ -8,6 +8,7 @@
     <div class="card-body">
         <h4 class="card-title">Profil Düzenleme</h4>
         <form class="forms-sample" method="post" action="@Url.Action("Profile","Admin")">
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 @Html.HiddenFor(x => x.PersonId)
                 <label>Ad ve Soyad:</label>

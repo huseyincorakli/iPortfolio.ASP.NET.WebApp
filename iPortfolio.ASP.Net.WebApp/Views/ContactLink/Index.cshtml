@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactLink> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="card-body">
+    <hr />
+    <h4 class="card-title">Link Bilgileri</h4>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Platform Adı </th>
+                    <th> Url </th>
+                    <th> Güncelle </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            @item.LinkId
+                        </td>
+                        <td> @item.LinkName </td>
+                        <td>
+                            @item.LinkUrl
+                        </td>
+                        <td><a href="/ContactLink/EditLink/@item.LinkId" class="btn btn-inverse-success">Güncelle</a> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

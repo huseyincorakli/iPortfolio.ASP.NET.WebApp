@@ -9,6 +9,7 @@
         <h3 class="card-title text-left mb-3">Yeni Tecrübe Ekle</h3>
 
         <form class="forms-sample" method="post" action="@Url.Action("AddSkill","Skill")">
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 @Html.HiddenFor(x => x.SkillId)
                 <label>Yetenek:</label>

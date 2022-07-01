@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
+    [AllowAnonymous]
     public class MainController : Controller
     {
         PersonManager personManager = new PersonManager(new EfPersonDal());
@@ -17,7 +18,8 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         GalleryManager galleryManager = new GalleryManager(new EfGalleryDal());
         InteractionManager interactionManager = new InteractionManager(new EfInteractionDal());
         TestimonialManager testimonialManager = new TestimonialManager(new EfTestimonialDal());
-
+        ExperienceInfoManager experienceManager = new ExperienceInfoManager(new EfExperienceInfoDal());
+        ContactLinkManager contactLinkManager = new ContactLinkManager(new EfContactLinkDal());
         public ActionResult Index()
         {
             MainModel md = new MainModel();
@@ -38,6 +40,11 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             md.Interactions = interactionManager.GetList();
             md.Testimonials = testimonialManager.GetList();
             md.Galleries = galleryManager.GetList();
+            md.ExperienceInfos = experienceManager.ListByDate();
+            md.twitter = contactLinkManager.GetById(1).LinkUrl;
+            md.facebook = contactLinkManager.GetById(2).LinkUrl;
+            md.instagram = contactLinkManager.GetById(3).LinkUrl;
+            md.linkedin = contactLinkManager.GetById(4).LinkUrl;
             return View(md);
         }
     }

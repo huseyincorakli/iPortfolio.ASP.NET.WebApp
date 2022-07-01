@@ -20,9 +20,9 @@ namespace EntityLayer.Concrete
         public string PersonEmail { get; set; }
         [StringLength(50)]
         public string PersonCity { get; set; }
-        [StringLength(20)]
+        [StringLength(50)]
         public string PersonJob { get; set; }
-        [StringLength(30)]
+        [StringLength(50)]
         public string PersonExperience { get; set; }
         [StringLength(80)]
         public string PersonAboutHead { get; set; }

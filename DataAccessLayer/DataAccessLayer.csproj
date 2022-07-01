@@ -140,6 +140,10 @@
     <Compile Include="Migrations\202207011319272_mig_ExperienceInfo_ContactLink_Added.designer.cs">
       <DependentUpon>202207011319272_mig_ExperienceInfo_ContactLink_Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207011843247_mig_UpdatePerson1822.cs" />
+    <Compile Include="Migrations\202207011843247_mig_UpdatePerson1822.designer.cs">
+      <DependentUpon>202207011843247_mig_UpdatePerson1822.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -204,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207011319272_mig_ExperienceInfo_ContactLink_Added.resx">
       <DependentUpon>202207011319272_mig_ExperienceInfo_ContactLink_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011843247_mig_UpdatePerson1822.resx">
+      <DependentUpon>202207011843247_mig_UpdatePerson1822.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

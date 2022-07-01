@@ -11,6 +11,8 @@ using System.Web.Mvc;
 
 namespace iPortfolio.ASP.Net.WebApp.Controllers
 {
+    [Authorize]
+   
     public class SkillController : Controller
     {
         SkillManager skillManager = new SkillManager(new EfSkillDal());
@@ -27,6 +29,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddSkill(Skill p)
         {
             ValidationResult validationResult = validationRules.Validate(p);
@@ -58,6 +61,7 @@ namespace iPortfolio.ASP.Net.WebApp.Controllers
             return View(item);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult EditSkill(Skill p)
         {
             ValidationResult validationResult = validationRules.Validate(p);

@@ -30,3 +30,4 @@ C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_PersonIntro.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_PersonUpdate.resources
 C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_ExperienceInfo_ContactLink_Added.resources
+C:\Users\hcpc2\source\repos\iPortfolio.ASP.Net.WebApp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_UpdatePerson1822.resources

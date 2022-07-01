@@ -16,6 +16,7 @@
 
 
         <form class="forms-sample" method="post" action="@Url.Action("EditPhotoGallery","Admin")">
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 @Html.HiddenFor(x => x.Id)
                 <label>Açıklama:</label>
